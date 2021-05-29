@@ -1,0 +1,169 @@
+.user-manage {
+    margin-top: 24px;
+}
+
+.user-manage__nav-link {
+
+}
+
+.user-manage__nav-link-btn {
+    padding: 8px 24px !important;
+    margin-right: 8px;
+    min-width: 80px !important;
+    color: #555 !important;
+}
+
+.user-manage__nav-link-btn:hover {
+    background-color: #e4e6e8;
+    border-radius: 24px;
+    color: #000 !important;
+}
+
+.user-manage__nav-link--active {
+    background-color: hsl(27deg 90% 55%);
+    border-radius: 24px;
+    color: #fff !important;
+}
+
+.user-info-detail {
+    margin-top: 24px;
+}
+
+.user-profile {
+    padding-bottom: 24px;
+    border-bottom: 1px solid #ccc;
+}
+
+.user-profile__avatar {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+
+.simulate-upload-input {
+    margin: 8px 0;
+}
+
+.user-profile__user-name {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.user-profile__name {
+    margin-top: 16px;
+}
+
+.user-profile__name p {
+    display: inline-block;
+    min-width: 160px
+}
+
+.user-profile__name input {
+    padding-left: 8px;
+    width: 360px;
+}
+
+.user-profile__location {
+    margin-top: 16px;
+}
+
+.user-profile__location p {
+    display: inline-block;
+    min-width: 160px
+}
+
+.user-profile__location input {
+    padding-left: 8px;
+    width: 360px;
+}
+
+.user-profile__university {
+    margin-top: 16px;
+}
+
+.user-profile__university p {
+    display: inline-block;
+    min-width: 160px
+}
+
+.user-profile__university input {
+    padding-left: 8px;
+    width: 360px;
+}
+
+.user-profile__change-info {
+    margin-top: 16px;
+    margin-left: 160px;
+}
+
+.user-activity {
+    margin-top: 24px;
+}
+
+.user-activity__notification {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin: 4px 0;
+    padding: 4px 4px 4px 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #eee;
+}
+
+.user-activity__notification:hover {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #000;
+}
+
+.user-manage__post {
+    margin: 16px;
+    display: none;
+}
+
+.user-manage__post-detail {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 8px;
+    margin: 16px 4px;
+}
+
+.user-manage__post-detail:hover {
+    cursor: pointer;
+    background-color: #eee;
+}
+
+.user-manage__post-user-avatar {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+.user-manage__post-header {
+    color: #007bff;
+}
+
+.user-manage__post-content {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.user-manage__post-time {
+    display: block;
+    text-align: right;
+    padding-right: 8px;
+    margin-top: 16px;
+}

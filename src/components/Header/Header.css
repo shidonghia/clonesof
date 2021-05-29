@@ -1,0 +1,27 @@
+#had-login {
+    display: none;
+    height: 100%;
+    align-items: center;
+}
+.had-login-user {
+    padding-right: 8px;
+}
+
+.had-login-user-avatar {
+    width: 36px;
+    height: 36px;
+    object-fit: center;
+    border-radius: 50%;
+}
+
+.had-login-user-name {
+    font-size: 12px;
+}
+
+#log-out-btn {
+    font-size: 12px;
+}
+
+.header-nav-link--active {
+    background-color: red;
+}

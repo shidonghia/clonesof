@@ -1,0 +1,65 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+main{
+    background-color: #dddddd;
+    min-height: 300px;
+    padding: 7.5px 15px;
+}
+.login-action {
+    background-image: url('https://image.freepik.com/free-photo/hand-painted-watercolor-background-with-sky-clouds-shape_24972-1095.jpg');
+    width: 100%;
+    min-height: 660px;
+    background-size: cover;
+    background-position: center;
+}
+.login-form{
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 15px;
+    border: 2px dotted #cccccc;
+    border-radius: 10px;
+}
+h1{
+    color: #009999;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+.input-box{
+    margin-bottom: 10px;
+}
+.input-box input{
+    padding: 7.5px 15px;
+    width: 100%;
+    border: 1px solid #cccccc;
+    outline: none;
+    border-radius: 5px;
+}
+.btn-box{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-box button{
+    padding: 7.5px 15px;
+    border-radius: 2px;
+    background-color: #009999;
+    color: #ffffff;
+    border: none;
+    outline: none;
+}
+.text-form{
+    font-family: sans-serif;
+    margin-bottom: 7px;
+}
+.link-signup{
+    text-align: center;
+}
+
+.link-signup-btn {
+    text-decoration: none;
+}

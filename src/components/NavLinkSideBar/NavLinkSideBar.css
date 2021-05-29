@@ -1,0 +1,41 @@
+.nav-link-side-bar {
+    margin-top: 16px;
+    position: fixed;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group {
+    position: relative;
+}
+
+.list-group-item {
+    border: none !important;
+}
+
+.side-bar-link {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    height: 100%;
+    /* position: absolute; 
+    top: 0;
+    left: 0; */
+}
+
+.side-bar-link--active {
+    padding: 8px 16px;
+    background-color: #eff0f1;
+    color: #0c0d0e !important;
+    font-weight: bold;  
+}
+
+.side-bar-link:hover {
+    padding: 8px 16px;
+    background-color: #eff0f1;
+    color: #0c0d0e !important;
+}
+

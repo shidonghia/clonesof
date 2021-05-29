@@ -1,0 +1,59 @@
+.post-text-area {
+    margin-top: 24px;
+}
+
+.post-text-area__title {
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 4px 8px;
+    margin: 4px 0;
+    outline: none;
+}
+
+.post-text-area__title:focus {
+    border-color: #6cbbf7;
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+    color: #0c0d0e;
+    outline: 0;
+}
+
+.post-text-area__content {
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid #ccc !important;
+}
+
+.hasFocus {
+    border-color: #6cbbf7;
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+    color: #0c0d0e;
+    outline: 0;
+    min-height: 400px;
+    border-radius: 4px;
+    padding: 0 8px;
+}
+
+.post-text-area__tags {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    padding: 4px 8px;
+    margin: 16px 0px;
+    outline: none;
+}
+
+.post-text-area__tags:focus {
+    border-color: #6cbbf7;
+    box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+    color: #0c0d0e;
+    outline: 0;
+}
+
+.post-text-area__sunmit-btn {
+    margin: 8px 0;
+    display: block;
+}
