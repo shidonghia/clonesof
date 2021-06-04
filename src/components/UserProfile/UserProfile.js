@@ -1,7 +1,35 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './UserProfile.css';
 
 const UserProfile = () => {
+    const [userPost, setUserPost] = useState([
+        {
+            title: 'Hello',
+            content: ' Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success ',
+            userImage: 'https://i.pinimg.com/236x/8a/7e/40/8a7e400fa9ecbcf3a8893863bd4d13e5--manga-art-anime-manga.jpg',
+            postTime: '4 days ago'
+        },
+        {
+            title: 'Hello HelloHelloHelloHelloHelloHello Hello Hello Hello Hello',
+            content: ' Success  Success  Success  Success  Success ',
+            userImage: 'https://i.pinimg.com/236x/8a/7e/40/8a7e400fa9ecbcf3a8893863bd4d13e5--manga-art-anime-manga.jpg',
+            postTime: '25/05/2021 4:31pm'
+        },
+        {
+            title: 'Hello Hello Hello',
+            content: ' Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success  Success ',
+            userImage: 'https://i.pinimg.com/236x/8a/7e/40/8a7e400fa9ecbcf3a8893863bd4d13e5--manga-art-anime-manga.jpg',
+            postTime: '3 minutes ago'
+        },
+    ])
+
+    const [userInfo, setUserInfo] = useState({
+        username: 'User Name',
+        name: 'Đào Đình Nghĩa',
+        location: 'Việt Nam',
+        university: 'University of Engineering and Technology'
+    })
+
     const clickProfile = () => {
         var userManagePost = document.getElementById('user-manage__post');
         var userInfoDetail = document.getElementById('user-info-detail');
@@ -40,9 +68,26 @@ const UserProfile = () => {
             reader.readAsDataURL(file);
         }
     }
+
     const uploadAvatar = () => {
         document.getElementById('myFile').click()
+    }       
+    
+    const handleOnchange = (e) => {
+        const target = e.target;
+        const value = target.value;
+        const name = target.name;
+        setUserInfo((prevState) => (
+            {...prevState, [name]:value}
+        ))
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        alert(userInfo.name +  userInfo.location + userInfo.university)
+    }
+
+
     return (
         <div className="user-manage">
             <div className="user-manage__nav-link">
@@ -69,20 +114,23 @@ const UserProfile = () => {
                             </div>
 
                             <div class="col-8">
-                                <div className="user-profile__user-name">User Name</div>
-                                <div className="user-profile__name">
-                                    <p>Name: </p>
-                                    <input type="text" value="Đào Đình Nghĩa"></input>
-                                </div>
-                                <div className="user-profile__location">
-                                    <p>Location:</p>
-                                    <input type="text" value="Việt Nam"></input>
-                                </div>
-                                <div className="user-profile__university">
-                                    <p>University: </p>
-                                    <input type="text" value="University of Engineering and Technology"></input>
-                                </div>
-                                <button type="button" className="btn btn-primary user-profile__change-info">Change Infomation</button>
+                                <div className="user-profile__user-name">{userInfo.username}</div>
+                                <form onSubmit={handleSubmit}>
+                                    <div className="user-profile__name">
+                                        <p>Name: </p>
+                                        <input type="text" name="name" defaultValue={userInfo.name} onChange={(e) => handleOnchange(e)}></input>
+                                    </div>
+                                    <div className="user-profile__location">
+                                        <p>Location:</p>
+                                        <input type="text" name="location" defaultValue={userInfo.location} onChange={(e) => handleOnchange(e)}></input>
+                                    </div>
+                                    <div className="user-profile__university">
+                                        <p>University: </p>
+                                        <input type="text" name="university" defaultValue={userInfo.university} onChange={(e) => handleOnchange(e)}></input>
+                                    </div>
+                                    <button type="submit" className="btn btn-primary user-profile__change-info">Change Infomation</button>
+                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -106,67 +154,25 @@ const UserProfile = () => {
 
             <div id="user-manage__post" className="user-manage__post">
                 <div class="container">
-                    <a className="user-manage__post-detail">
-                        <div class="row">
-                            <div class="col-3">
-                                <img className="user-manage__post-user-avatar" src='https://i.pinimg.com/236x/8a/7e/40/8a7e400fa9ecbcf3a8893863bd4d13e5--manga-art-anime-manga.jpg'></img>
-                            </div>
-                            <div class="col-9">
-                                <h3 className="user-manage__post-header">This is title post</h3>
-                                <p className="user-manage__post-content">This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content postThis is content postThis is content post</p>
-                                <p className="user-manage__post-time">Post at 29/05/2021 5:00pm</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a className="user-manage__post-detail">
-                        <div class="row">
-                            <div class="col-3">
-                                <img className="user-manage__post-user-avatar" src='https://i.pinimg.com/236x/8a/7e/40/8a7e400fa9ecbcf3a8893863bd4d13e5--manga-art-anime-manga.jpg'></img>
-                            </div>
-                            <div class="col-9">
-                                <h3 className="user-manage__post-header">This is title post</h3>
-                                <p className="user-manage__post-content">This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content postThis is content postThis is content post</p>
-                                <p className="user-manage__post-time">Post at 29/05/2021 5:00pm</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a className="user-manage__post-detail">
-                        <div class="row">
-                            <div class="col-3">
-                                <img className="user-manage__post-user-avatar" src='https://i.pinimg.com/236x/8a/7e/40/8a7e400fa9ecbcf3a8893863bd4d13e5--manga-art-anime-manga.jpg'></img>
-                            </div>
-                            <div class="col-9">
-                                <h3 className="user-manage__post-header">This is title post</h3>
-                                <p className="user-manage__post-content">This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content postThis is content postThis is content post</p>
-                                <p className="user-manage__post-time">Post at 29/05/2021 5:00pm</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a className="user-manage__post-detail">
-                        <div class="row">
-                            <div class="col-3">
-                                <img className="user-manage__post-user-avatar" src='https://i.pinimg.com/236x/8a/7e/40/8a7e400fa9ecbcf3a8893863bd4d13e5--manga-art-anime-manga.jpg'></img>
-                            </div>
-                            <div class="col-9">
-                                <h3 className="user-manage__post-header">This is title post</h3>
-                                <p className="user-manage__post-content">This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content postThis is content postThis is content post</p>
-                                <p className="user-manage__post-time">Post at 29/05/2021 5:00pm</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a className="user-manage__post-detail">
-                        <div class="row">
-                            <div class="col-3">
-                                <img className="user-manage__post-user-avatar" src='https://i.pinimg.com/236x/8a/7e/40/8a7e400fa9ecbcf3a8893863bd4d13e5--manga-art-anime-manga.jpg'></img>
-                            </div>
-                            <div class="col-9">
-                                <h3 className="user-manage__post-header">This is title post</h3>
-                                <p className="user-manage__post-content">This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content post This is content postThis is content postThis is content post</p>
-                                <p className="user-manage__post-time">Post at 29/05/2021 5:00pm</p>
-                            </div>
-                        </div>
-                    </a>
+                    {
+                        userPost.map((post, index) => {
+                            return (
+                                <a className="user-manage__post-detail" key={index}>
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <img className="user-manage__post-user-avatar" alt="User Image" src={post.userImage}></img>
+                                        </div>
+                                        <div class="col-9">
+                                            <h3 className="user-manage__post-header">{post.title}</h3>
+                                            <p className="user-manage__post-content">{post.content}</p>
+                                            <p className="user-manage__post-time">{post.postTime}</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            )
 
+                        })
+                    }
                 </div>
             </div>
         </div>

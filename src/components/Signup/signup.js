@@ -1,5 +1,6 @@
 import React from 'react';
-import './signup.css'
+import './signup.css';
+import {Link} from 'react-router-dom'
 
 const SignUp = () => {
     return (
@@ -27,7 +28,7 @@ const SignUp = () => {
                             </button>
                                 <div class="link-login">
                                     <span>Already have an account ? </span>
-                                    <a href=""> Log in</a>
+                                    <Link to="/log-in"> Log in</Link>
                                 </div>
                             </div>
                         </form>

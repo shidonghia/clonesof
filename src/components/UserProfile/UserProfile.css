@@ -128,7 +128,7 @@
 }
 
 .user-manage__post-detail {
-    display: inline-block;
+    display: block;
     border: 1px solid #ccc;
     padding: 8px;
     border-radius: 8px;
@@ -152,9 +152,14 @@
 
 .user-manage__post-header {
     color: #007bff;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
 }
 
 .user-manage__post-content {
+    min-height: 60px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
